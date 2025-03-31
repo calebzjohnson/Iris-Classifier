@@ -13,7 +13,8 @@ Model Features:
  - Our initial input layer has 4 nodes since for 4 plant traits
  - 1 hidden layer with 8 nodes
  - Our output layer has 3 nodes to classify 3 species
- - The program is trained for a default 500 epochs with a learning rate of 0.01
+ - The program is trained for 500 epochs with a learning rate of 0.01
+    - These parameters were chosen to optimise both results and runtime
  - Implements L2 regulation to help avoid overfitting
 
 Required Libraries:
