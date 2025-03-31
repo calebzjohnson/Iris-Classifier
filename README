@@ -8,7 +8,7 @@ Data Usage:
     - Train/test data is split randomly so running multiple times will yield different
       results
 
-Model Training:
+Model Features:
  - Simple feed forward network
  - Our initial input layer has 4 nodes since for 4 plant traits
  - 1 hidden layer with 8 nodes
