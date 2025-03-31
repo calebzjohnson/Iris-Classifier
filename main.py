@@ -50,6 +50,8 @@ if __name__ == "__main__":
     ntwk = MLPClassifier(
         hidden_layer_sizes=(5, 5),
         max_iter=1000,
+        alpha=0.001,
+        learning_rate_init=0.01,
         random_state=42)
     ntwk.fit(train_input, train_label)
     test_predictions = ntwk.predict(test_input)
