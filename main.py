@@ -29,6 +29,7 @@ class DataProcessing:
 
         return i_train_scaled, i_test_scaled, o_train, o_test, label_encoder, scaler
 
+# Predict species based on user input
 def user_predict(ntwk, encoder, scaler):
     sepal_l = float(input("Sepal Length(cm): "))
     sepal_w = float(input("Sepal Width(cm): "))
@@ -46,19 +47,21 @@ if __name__ == "__main__":
     data_processing = DataProcessing()
     train_input, test_input, train_label, test_label, label_encoder, scaler = data_processing.process_data('iris_data.txt')
 
-    # define and train the mdoel
+    # Define and train the mdoel
     ntwk = MLPClassifier(
-        hidden_layer_sizes=(5, 5),
-        max_iter=1000,
+        hidden_layer_sizes=(8,),
+        max_iter=500,
         alpha=0.001,
         learning_rate_init=0.01,
         random_state=42)
     ntwk.fit(train_input, train_label)
+
+    # Test model
     test_predictions = ntwk.predict(test_input)
     accuracy = accuracy_score(test_label, test_predictions) * 100
     print(f"Test Accuracy: {accuracy:.2f}%")
 
-    # get user input
+    # Get user input
     user_input = input("Do you want to input your own iris data (y/n)? ").strip().lower()
     if user_input == "y":
         user_predict(ntwk, label_encoder, scaler)
