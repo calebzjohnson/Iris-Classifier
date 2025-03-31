@@ -3,7 +3,7 @@ This program utilizes an artificial neural network to classify iris plants into
 three different species based on given plant information. 
 
 Data Usage:
- - The data is trained and tested on the iris_data.txt file within this directory
+ - The data is trained and tested on the iris_data.txt file within this directory (real plant data)
  - 80% of the data is used for training and 20% used for testing
     - Train/test data is split randomly so running multiple times will yield different
       results
