@@ -1,0 +1,25 @@
+Assignment Overview:
+This program utilizes an artificial neural network to classify iris plants into
+three different species based on given plant information. 
+
+Data Usage:
+ - The data is trained and tested on the iris_data.txt file within this directory
+ - 80% of the data is used for training and 20% used for testing
+    - Train/test data is split randomly so running multiple times will yield different
+      results
+
+Model Training:
+ - Simple feed forward network
+ - Our initial input layer has 4 nodes since for 4 plant traits
+ - 2 hidden layers, each with 5 nodes
+ - Our output layer has 3 nodes to classify 3 species
+ - The program is trained for a default 1000 epochs
+
+Required Libraries:
+ - Python 3 (to run the program)
+ - NumPy (handles and performs numerical operations)
+ - Sci-Kit Learn (preprocesses data, creates and trains model)
+
+Compile and Run:
+ - To install the NumPy and Sci-Kit, you can use pip: "pip install numpy scikit-learn"
+ - To compile and run the program use: "python3 main.py" (you can use any version of python)
